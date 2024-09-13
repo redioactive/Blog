@@ -1,0 +1,30 @@
+@use "sass:math";
+
+//默认设计稿的宽度和高度
+$designWidth:1920px;
+$designHeight:1080px;
+
+/*
+* 将px转换为 vw单位
+@param $px - 输入的像素值
+@return - 转换后的vw值
+*/
+@function vw($px) {
+  @if not(type-of($px) == 'number') {
+    @error "Expected a number, but got #{$px}.";
+  }
+  @return math.div($px,$designWidth) * 100 * 1vw;
+}
+
+/*
+将px 装换位 vh单位
+@param $px - 输入的像素值
+@return - 转换后的vh 值
+*/
+
+@function vh($px) {
+  @if not(type-of($px) == 'number') {
+    @error "Expected a number, but got #{$px}.";
+  }
+  @return math.div($px,$designHeight) * 100 * 1vh;
+}

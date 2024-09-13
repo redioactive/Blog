@@ -1,27 +1,17 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import ErrorPage from "@/views/components/ErrorPage.vue";
 
 </script>
 
 <template>
+  <ErrorPage></ErrorPage>
   <h1>这是主应用</h1>
-  <div class="content">
-    <p></p>
-  </div>
+
   <WujieVue name="vue3" url="http://localhost:5174/"></WujieVue>
   <WujieVue name="react" url="http://localhost:5175/"></WujieVue>
-
+  <a href="">123</a>
 </template>
 
 <style scoped lang="scss">
-.content {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  p{
-    width: 25px;
-    height: 25px;
-    background-color: aquamarine;
-  }
-}
+
 </style>
