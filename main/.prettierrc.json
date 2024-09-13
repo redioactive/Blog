@@ -1,8 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
-  "semi": false,
-  "tabWidth": 2,
-  "singleQuote": true,
-  "printWidth": 100,
-  "trailingComma": "none"
+  "semi": false, // 行尾是否使用分号，默认为true
+  "tabWidth": 2, // 一个tab代表几个空格数
+  "singleQuote": true,  //字符串是否需要使用单引号
+  "printWidth": 120,  // 一行的字符数换行
+  "trailingComma": "none", //是否使用尾逗号
+  "arrowParens": "avoid", //箭头函数单变量省略括号
+  "bracketSpacing": true, //对象大括号直接是否有空格，默认为true。效果:{foo:bar}
+  "endOfLine":"auto", //保留在windows和unix下的換行符
 }

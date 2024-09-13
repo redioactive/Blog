@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ErrorPage from "@/views/components/ErrorPage.vue";
+import ErrorPage from '@/views/error-page/404.vue'
 
 </script>
 
@@ -9,7 +9,7 @@ import ErrorPage from "@/views/components/ErrorPage.vue";
 
   <WujieVue name="vue3" url="http://localhost:5174/"></WujieVue>
   <WujieVue name="react" url="http://localhost:5175/"></WujieVue>
-  <a href="">123</a>
+
 </template>
 
 <style scoped lang="scss">
