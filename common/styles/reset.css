@@ -1,71 +1,255 @@
-* {
+/*全局样式*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block
+}
+
+audio, canvas, video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     margin: 0;
     padding: 0
-    /*所有元素的内外边距清除*/
 }
 
-em, i {
-    font-style: normal
-    /*em/i是斜体字 让他变正*/
+body, button, input, select, textarea {
+    font-family: sans-serif;
+    color: #222
 }
 
-li {
-    list-style: none
-    /*去掉列表的圆形点装饰*/
+::-moz-selection {
+    background: #ccc;
+    color: #fff;
+    text-shadow: none
+}
+
+::selection {
+    background: #ccc;
+    color: #fff;
+    text-shadow: none
+}
+
+a {
+    text-decoration: none;
+    outline: 0
+}
+
+a:focus {
+    outline: 0
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+p {
+    margin: 0 0 1em 0
+}
+
+p:last-of-type {
+    margin: 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b, strong {
+    font-weight: 700
+}
+
+blockquote {
+    margin: 1em 40px
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: 700
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, monospace
+}
+
+code {
+    display: inline-block
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+
+q {
+    quotes: none
+}
+
+q:after, q:before {
+    content: "";
+    content: none
+}
+
+small {
+    font-size: 85%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -.5em
+}
+
+sub {
+    bottom: -.25em
+}
+
+strong {
+    font-weight: 400
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 100%
+}
+
+li, ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+dd {
+    margin: 0
+}
+
+nav ol, nav ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0
 }
 
 img {
     border: 0;
+    -ms-interpolation-mode: bicubic;
     vertical-align: middle
-    /* 图片上有连接可能会导致图片出现边框让边框变无,vertical-align去掉图片底部的基线空白缝隙还能让旁边的文字垂直居中*/
 }
 
-button {
+figure {
+    margin: 0
+}
+
+form {
+    margin: 0
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+label {
     cursor: pointer
-    /*按钮上鼠标变手*/
 }
 
-a {
-    color: #666;
-    text-decoration: none
-    /*超链接去掉下划线并变色*/
+legend {
+    border: 0;
+    padding: 0
 }
 
-a:hover {
-    color: #a6e3e9
-    /*:hover让鼠标经过连接变红*/
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline
 }
 
 button, input {
-    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
-    /*这些都是字体类型\5B8B\4F53是宋体的Unicode编码显示不然中文乱码*/
+    line-height: normal
 }
 
-body {
-    /*css3的文字放大抗锯齿*/
-    -webkit-font-smoothing: antialiased;
-    background-color: #fff;
-    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
-    color: #666
-    /*字体的大小是12px行高1.5*/
+button, input[type=button], input[type=reset], input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: button
 }
 
-.hide, .none {
-    display: none
+input[type=checkbox], input[type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
 }
 
-.clearfix:after {
-    visibility: hidden;
-    clear: both;
-    display: block;
-    content: ".";
-    height: 0 /*清除浮动的伪类选择器就是给添加了这个.clearfix的元素后面添加一个元素 visibility让他不显示 它必须有content 他默认是行内元素
-    因为我们清除浮动的基本原理就是给他内部最后一个元素添加一个div(块级元素)让他占有最下面使盒子撑开
-    然后给他清除浮动
-    */
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
 }
 
-.clearfix {
-    *zoom: 1
-    /*Ie6 ie7专属清除浮动*/
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical
+}
+
+input:invalid, textarea:invalid {
+    background-color: #f0dddd
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td {
+    vertical-align: top
 }

@@ -1,0 +1,99 @@
+@mixin glitch-animation($animation-name, $keyframes) {
+  @keyframes #{$animation-name} {
+    @each $keyframe, $properties in $keyframes {
+
+      #{$keyframe} {
+        @each $property, $value in $properties {
+          #{$property}: $value;
+        }
+      }
+
+    }
+  }
+}
+
+//使用
+@include glitch-animation('glitch', (
+        0%: (
+                transform: translate(0)
+        ),
+        20%: (
+                transform: translate(-1px, 1px)
+        ),
+        40%: (
+                transform: translate(-1px, -1px)
+        ),
+        60%: (
+                transform: translate(1px, 1px)
+        ),
+        80%: (
+                transform: translate(1px, -1px)
+        ),
+        100%: (
+                transform: translate(0)
+        )
+));
+
+@include glitch-animation('glitch1', (
+        0%: (
+                transform: translate(0)
+        ),
+        20%: (
+                transform: translate(-1px, 1px) skewX(-10deg)
+        ),
+        40%: (
+                transform: translate(-1px, -1px) skewX(-2deg)
+        ),
+        60%: (
+                transform: translate(1px, 1px) skewX(-15deg)
+        ),
+        80%: (
+                transform: translate(1px, -1px) skewX(-4deg)
+        ),
+        100%: (
+                transform: translate(0)
+        )
+));
+
+@include glitch-animation('glitch2', (
+        0%: (
+                transform: translate(0)
+        ),
+        20%: (
+                transform: translate(-1px, 1px) skewX(-10deg)
+        ),
+        40%: (
+                transform: translate(-1px, -1px) skewX(-2deg)
+        ),
+        60%: (
+                transform: translate(1px, 1px) skewX(-15deg)
+        ),
+        80%: (
+                transform: translate(1px, -1px) skewX(-4deg)
+        ),
+        100%: (
+                transform: translate(0)
+        )
+));
+
+@include glitch-animation('glitch3', (
+        0%: (
+                transform: translate(0)
+        ),
+        20%: (
+                transform: translate(1px, 1px) skewX(-5deg)
+        ),
+        40%: (
+                transform: translate(1px, -1px) skewX(2deg)
+        ),
+        60%: (
+                transform: translate(1px, 1px) skewX(-5deg)
+        ),
+        80%: (
+                transform: translate(-1px, -1px) skewX(-1deg)
+        ),
+        100%: (
+                transform: translate(0)
+        )
+));
+

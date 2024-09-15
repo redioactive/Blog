@@ -1,0 +1,58 @@
+@mixin glitch-animation($animation-name, $clip-frames) {
+  @keyframes #{$animation-name} {
+    @each $keyframe, $clip in $clip-frames {
+      #{$keyframe} {
+        clip: $clip;
+      }
+    }
+  }
+}
+
+
+@include glitch-animation('glitch-error-1', (
+        0%: rect(114px, 600px, 97px, 30px),
+        5%: rect(1px, 600px, 4px, 30px),
+        10%: rect(136px, 600px, 49px, 30px),
+        15%: rect(29px, 600px, 200px, 30px),
+        20%: rect(16px, 600px, 105px, 30px),
+        25%: rect(54px, 600px, 76px, 30px),
+        30%: rect(122px, 600px, 43px, 30px),
+        35%: rect(39px, 600px, 116px, 30px),
+        40%: rect(131px, 600px, 14px, 30px),
+        45%: rect(48px, 600px, 65px, 30px),
+        50%: rect(134px, 600px, 56px, 30px),
+        55%: rect(103px, 600px, 105px, 30px),
+        60%: rect(41px, 600px, 23px, 30px),
+        65%: rect(67px, 600px, 143px, 30px),
+        70%: rect(148px, 600px, 87px, 30px),
+        75%: rect(72px, 600px, 139px, 30px),
+        80%: rect(85px, 600px, 93px, 30px),
+        85%: rect(126px, 600px, 53px, 30px),
+        90%: rect(125px, 600px, 200px, 30px),
+        95%: rect(67px, 600px, 108px, 30px),
+        100%: rect(15px, 600px, 116px, 30px)
+));
+
+@include glitch-animation('glitch-error-2', (
+        0%: rect(109px, 600px, 103px, 30px),
+        5%: rect(49px, 600px, 72px, 30px),
+        10%: rect(43px, 600px, 31px, 30px),
+        15%: rect(92px, 600px, 122px, 30px),
+        20%: rect(109px, 600px, 129px, 30px),
+        25%: rect(75px, 600px, 117px, 30px),
+        30%: rect(74px, 600px, 91px, 30px),
+        35%: rect(135px, 600px, 147px, 30px),
+        40%: rect(138px, 600px, 50px, 30px),
+        45%: rect(65px, 600px, 108px, 30px),
+        50%: rect(75px, 600px, 144px, 30px),
+        55%: rect(108px, 600px, 85px, 30px),
+        60%: rect(118px, 600px, 104px, 30px),
+        65%: rect(36px, 600px, 58px, 30px),
+        70%: rect(106px, 600px, 94px, 30px),
+        75%: rect(27px, 600px, 68px, 30px),
+        80%: rect(132px, 600px, 110px, 30px),
+        85%: rect(5px, 600px, 48px, 30px),
+        90%: rect(16px, 600px, 24px, 30px),
+        95%: rect(60px, 600px, 81px, 30px),
+        100%: rect(5px, 600px, 126px, 30px)
+));

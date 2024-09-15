@@ -30,3 +30,32 @@ $mod-sel: "--" !default;
     }
   }
 }
+// 支持嵌套的 block mixin
+@mixin b-nested($block, $parent) {
+  $B: #{$namespace + $block-sel + $block};
+  #{$parent} {
+    .#{$B} {
+      @content;
+    }
+  }
+}
+
+// 支持嵌套的 element mixin
+@mixin e-nested($el, $parent) {
+  $selector: #{$parent};
+  @at-root {
+    #{$selector + $elem-sel + $el} {
+      @content;
+    }
+  }
+}
+
+// 支持嵌套的 modifier mixin
+@mixin m-nested($mod, $parent) {
+  $selector: #{$parent};
+  @at-root {
+    #{$selector + $mod-sel + $mod} {
+      @content;
+    }
+  }
+}

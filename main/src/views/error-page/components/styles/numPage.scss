@@ -1,0 +1,38 @@
+@use './animate/numPage';
+@mixin glitch-effect() {
+  &{
+    color: #fff;
+    line-height: 1em;
+    position: relative;
+    font-size: 10em;
+  }
+  @media(min-width: 768px) {
+    font-size: 14em;
+  }
+  @media(min-width: 992px) {
+    font-size: 18em;
+  }
+  @media(min-width: 1400px) {
+    font-size: 22em;
+  }
+  &::before {
+    left: 3px;
+    text-shadow: -2px 0 #ff407d;
+    animation-name: glitch-error-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse
+  }
+  &::after {
+    left: -3px;
+    text-shadow: -2px 0 #6e38ce;
+    animation-name: glitch-error-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse
+  }
+}
