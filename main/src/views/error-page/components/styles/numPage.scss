@@ -5,6 +5,13 @@
     line-height: 1em;
     position: relative;
     font-size: 10em;
+    font-family: Ogg,sans-serif;
+  }
+  @font-face {
+    font-family: Ogg;
+    font-style: normal;
+    font-weight: 400;
+    src: url("@/assets/Ogg-Roman.woff2") format('woff2');
   }
   @media(min-width: 768px) {
     font-size: 14em;

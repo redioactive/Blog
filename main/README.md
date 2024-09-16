@@ -1,5 +1,6 @@
 # main
 https://www.mcube.fr/404
+#设计师必逛的 平台https://cn.eagle.cool/blog/post/best-websites-designers-love-for-finding-design-inspirations
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
