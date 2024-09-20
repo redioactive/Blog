@@ -1,13 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-
+import Layouts from '@/components/Layouts/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path:"/",
-      component:()=>import("@/views/dashboard/index.vue")
+      component:Layouts,
+      meta:{
+        path:"dashboard",
+        component:() => import("@/views/dashboard/index.vue"),
+        title:"首页",
+        affix:true
+      }
     },
     {
       path:"/403",
@@ -22,7 +28,7 @@ const router = createRouter({
       meta:{
         hidden:true
       }
-    }
+    },
   ]
 })
 

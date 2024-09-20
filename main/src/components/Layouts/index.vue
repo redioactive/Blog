@@ -1,11 +1,43 @@
 <script setup lang="ts">
+import {SideBar, Footer, Header, Content} from "@/components/Layouts/components";
 
 </script>
 
 <template>
-
+    <Header></Header>
+  <div class="xy-container">
+    <div class="xy-container__content">
+      <Content></Content>
+    </div>
+    <div class="xy-container__sidebar">
+      <SideBar></SideBar>
+    </div>
+  </div>
+    <Footer></Footer>
 </template>
 
 <style scoped lang="scss">
 
+
+@include b(container) {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: 0 200px;
+  @include e(content) {
+    width: 100%;
+    height: 700px;
+    background-color: lightcoral;
+  }
+  @include e(sidebar) {
+    width: 100%;
+    height: 700px;
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+@include b(footer) {
+  width: 100%;
+  height: 50px;
+  background-color: lightgreen;
+}
 </style>
