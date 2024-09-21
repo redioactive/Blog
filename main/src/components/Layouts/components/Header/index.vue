@@ -35,6 +35,9 @@ import {SearchOutlined} from '@ant-design/icons-vue'
     @include m(text){
       color: #000000;
     }
+    @include m(logo) {
+      object-fit: cover;
+    }
   }
   @include e(menus) {
     display: flex;

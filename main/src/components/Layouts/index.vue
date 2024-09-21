@@ -22,15 +22,16 @@ import {SideBar, Footer, Header, Content} from "@/components/Layouts/components"
 @include b(container) {
   display: grid;
   grid-template-columns: 70% 30%;
-  margin: 0 200px;
+  max-width: 1200px;
+  padding: 40px 15px;
+  margin: 0 auto;
+  width: 100%;
   @include e(content) {
     width: 100%;
     height: 700px;
-    background-color: lightcoral;
   }
   @include e(sidebar) {
-    width: 100%;
-    height: 700px;
+    width: 75%;
     background-color: lightgoldenrodyellow;
   }
 }
