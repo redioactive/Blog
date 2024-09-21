@@ -13,10 +13,7 @@ export default defineConfig({
     preprocessorOptions:{
       scss:{
         additionalData:'@import "../common/Bem/index.scss";'
-      },
-      imports:[
-        "../common/utils/responsive.scss"
-      ]
+      }
     }
   }
 })
