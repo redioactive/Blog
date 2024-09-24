@@ -15,20 +15,22 @@
         <input type="text" placeholder="搜索">
       </div>
       <div class="xy-header__menus--article">
+        <svg-icon iconName="icon-wenzhang" color="2c2c2c"></svg-icon>
         文章
         <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
       </div>
       <div class="xy-header__menus--assort">
+        <svg-icon iconName="icon-fenlei" color="2c2c2c"></svg-icon>
         分类
         <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
       </div>
       <div class="xy-header__menus--tools">
+        <svg-icon iconName="icon-tools2" color="2c2c2c" size=".85em"></svg-icon>
         工具
         <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
       </div>
       <div class="xy-header__menus--about">
         关于
-        <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
       </div>
     </div>
   </header>

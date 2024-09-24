@@ -32,7 +32,7 @@ import {SideBar, Footer, Header, Content} from "@/components/Layouts/components"
   }
   @include e(sidebar) {
     width: 75%;
-    background-color: lightgoldenrodyellow;
+
   }
 }
 

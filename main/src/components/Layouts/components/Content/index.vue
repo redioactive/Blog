@@ -90,7 +90,6 @@
   height: 16em;
   align-items: center;
   border-radius: 8px;
-  border: 2px solid #ccc;
   margin: 0 20px;
   box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
   @include e(left) {
