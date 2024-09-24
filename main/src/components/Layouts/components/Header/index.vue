@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {SearchOutlined} from '@ant-design/icons-vue'
+
 
 </script>
 
@@ -11,13 +11,25 @@ import {SearchOutlined} from '@ant-design/icons-vue'
       </routerLink>
     <div class="xy-header__menus">
       <div class="xy-header__menus--Search">
-        <SearchOutlined />
+        <svg-icon iconName="icon-search"></svg-icon>
         <input type="text" placeholder="搜索">
       </div>
-      <div class="xy-header__menus--article">文章</div>
-      <div class="xy-header__menus--assort">分类</div>
-      <div class="xy-header__menus--tools">工具</div>
-      <div class="xy-header__menus--about">关于</div>
+      <div class="xy-header__menus--article">
+        文章
+        <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
+      </div>
+      <div class="xy-header__menus--assort">
+        分类
+        <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
+      </div>
+      <div class="xy-header__menus--tools">
+        工具
+        <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
+      </div>
+      <div class="xy-header__menus--about">
+        关于
+        <svg-icon iconName="icon-arrow-down" color="#515151"></svg-icon>
+      </div>
     </div>
   </header>
 </template>
