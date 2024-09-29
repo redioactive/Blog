@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Layouts from '@/components/Layouts/index.vue'
+import Layouts from '@/Layouts/index.vue'
 
 /**
  * 常驻路由

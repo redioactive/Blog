@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {SideBar, Footer, Header, Content} from "@/components/Layouts/components";
+import {SideBar, Footer, Header, Content} from "@/Layouts/components";
 
 </script>
 
