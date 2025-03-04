@@ -17,7 +17,7 @@
 </template>
 
 <style scoped lang="scss">
-@import '../components/styles/animate/hoveEffect';
+@import 'styles/transition/hoveEffect';
 $font-f: Inconsolata, monospace;
 
 @include b(ErrorPage) {

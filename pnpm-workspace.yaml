@@ -1,4 +1,4 @@
 packages:
   - 'main'
   - 'web/**'
-  - 'common'
+  - 'common' #公共代码

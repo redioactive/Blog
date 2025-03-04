@@ -84,6 +84,7 @@
 </template>
 
 <style scoped lang="scss">
+@import '../../../styles/mixins.scss';
 @include b(item) {
   display: grid;
   grid-template-columns: 45% 55%;
@@ -146,7 +147,8 @@
     @include m(content) {
       font-size: 14px;
       height: 57px;
-      overflow: hidden;
+      white-space: normal;
+      @extend %ellipsis;
     }
   }
 }

@@ -18,17 +18,17 @@ import {SideBar, Footer, Header, Content} from "@/Layouts/components";
 
 <style scoped lang="scss">
 
-
 @include b(container) {
   display: grid;
   grid-template-columns: 70% 30%;
   max-width: 1200px;
   padding: 40px 15px;
-  margin: 0 auto;
   width: 100%;
+  margin: 100px auto 0 auto;
   @include e(content) {
     width: 100%;
     height: 700px;
+
   }
   @include e(sidebar) {
     width: 75%;

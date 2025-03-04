@@ -1,4 +1,4 @@
-@use './animate/numPage';
+@use 'transition/numPage';
 @mixin glitch-effect() {
   &{
     color: #fff;

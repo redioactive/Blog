@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,8 +14,8 @@
     "ant-design": "^1.0.0",
     "ant-design-vue": "^4.2.4",
     "axios": "^1.7.7",
-    "element-plus": "^2.8.2",
     "gsap": "^3.12.5",
+    "husky": "^9.1.6",
     "sass-embedded": "^1.78.0",
     "sass-loader": "^16.0.1"
   },

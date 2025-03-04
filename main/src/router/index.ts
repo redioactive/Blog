@@ -52,6 +52,87 @@ const router = createRouter({
           }
         }
       ]
+    },
+    {
+      path:"/link",
+      meta:{
+        title:"外链",
+        svgIcon:"link"
+      },
+      children:[
+        {
+          path:"https://github.com/redioactive",
+          component:()=>{},
+          name:"github",
+          meta:{
+            svgIcon:"icon-github"
+          }
+        },
+        {
+          path:"",
+          component:()=>{},
+          name:"Rss",
+          meta:{
+            svgIcon:"icon-rss"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"SiteMap",
+          meta:{
+            svgIcon:"icon-sitemap"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"Email",
+          meta:{
+            svgIcon:"icon-email2"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"BiliBili",
+          meta:{
+            svgIcon: "icon-Bilibili"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"NetEaseCloud",
+          meta:{
+            svgIcon:"icon-netease-cloud"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"知识星球",
+          meta:{
+            svgIcon:"icon-tubiaozhizuomoban"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"ZhiHu",
+          meta:{
+            svgIcon:"icon-zhihu"
+          }
+        },
+        {
+          path:"",
+          component:() => {},
+          name:"Wechat",
+          meta:{
+            svgIcon: "icon-wechat-"
+          }
+        },
+      ]
     }
   ]
 })

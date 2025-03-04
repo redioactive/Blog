@@ -1,0 +1,23 @@
+:root{
+    /** Body */
+    --xy-body-text-color:var(--el-text-color-primary);
+    --xy-body-bg-color: var(--el-bg-color-page);
+    /** Header区域 = Menus组件 + Header组件 */
+
+    --xy-nav-height:55px;
+    /**SideBar组件*/
+    --xy-color-background-primary: #fff;
+    --xy-color-background-secondary: lightcoral;
+    --xy-color-text-primary: #4c4948;
+    --xy-color-text-secondary: #1f2d3d;
+    --xy-color-button-background: #1ca7ee;
+    --xy-color-button-text: #fff;
+    --xy-spacing-xs: 4px;
+    --xy-spacing-sm: 14px;
+    --xy-spacing-md: 20px;
+    --xy-border-radius-sm: 8px;
+    --xy-border-radius-circle: 70px;
+    --xy-font-size-lg: 1.57em;
+    --xy-font-size-md: 1.4em;
+    --xy-box-shadow-soft: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
+}

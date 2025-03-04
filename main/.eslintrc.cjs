@@ -1,62 +1,75 @@
-/* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
-
 module.exports = {
   root: true,
-  'extends': [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting'
-  ],
-  plugins:[
-      'vue',
-      'prettier'
-  ],
-  rules:{
-    'indent':['error',2], //确保所有的缩进 使用2个空格
-    'linebreak-style':['error','unix'], //结尾换行符为 LF
-    'quotes':['error','single'], // 字符串使用单引号
-    'eol-last':['error','always'], //行末添加一个空行
-    'no-trailing-spaces':'error', //删除行末的空白字符
-    'space-infix-ops':'error', //运算符两边有空格
-    'brace-style':['error','1tbs'], //大括号不起另一行 确保条件语句大括号使用1tbs风格
-    'key-spacing':['error',{beforeColon:false,afterColon:true}], //不强制空格在操作符周围
+  env: {
+    browser: true,
+    node: true,
+    es6: true
   },
+  extends: [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/typescript/recommended",
+    "@vue/prettier",
+    "@vue/eslint-config-typescript"
+  ],
+  parser: "vue-eslint-parser",
   parserOptions: {
-    ecmaVersion: 'latest', //使用最新版本的 ECMAScript 语法
-    sourceType:'module' // 支持 ES 模块
-  },
-  env:{
-    browser:true,
-    node:true,
-    es2021:true
-  },
-
-  override:[
-    {
-      files:[
-          '.eslintrc.{js,cjs}'
-      ],
-      rules:{
-        //对于 js文件，字符串使用单引号
-        'quotes':['error','single']
-      }
-    },
-    {
-      files:['*.html','*.less','*.css','*.json'],
-      rules:{
-        //对于这些文件，字符串使用单引号
-        'quotes':['error','double']
-      }
-    },
-    {
-      files:['package.json'],
-      rules:{
-        //对 package.json 文件，缩进4个空格
-        'indent':['error',4]
-      }
+    parser: "@typescript-eslint/parser",
+    ecmaVersion: 2020,
+    sourceType: "module",
+    jsxPragma: "React",
+    ecmaFeatures: {
+      jsx: true,
+      tsx: true
     }
-  ],
-
+  },
+  rules: {
+    // TS
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-debugger": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_"
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_"
+      }
+    ],
+    // Vue
+    "vue/no-v-html": "off",
+    "vue/require-default-prop": "off",
+    "vue/require-explicit-emits": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/html-self-closing": [
+      "error",
+      {
+        html: {
+          void: "always",
+          normal: "always",
+          component: "always"
+        },
+        svg: "always",
+        math: "always"
+      }
+    ],
+    // Prettier
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto"
+      }
+    ]
+  }
 }
